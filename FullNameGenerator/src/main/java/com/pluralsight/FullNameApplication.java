@@ -10,16 +10,16 @@ public class FullNameApplication {
         //get known values
         System.out.println("Please enter your name");
         System.out.print("First Name: ");
-        String firstName = scanner.nextLine();
+        String firstName = scanner.nextLine().trim();
 
         System.out.print("Middle Name: ");
-        String middleName = scanner.nextLine();
+        String middleName = scanner.nextLine().trim();
 
         System.out.print("Last Name: ");
-        String lastName = scanner.nextLine();
+        String lastName = scanner.nextLine().trim();
 
         System.out.print("Suffix: ");
-        String suffix = scanner.nextLine();
+        String suffix = scanner.nextLine().trim();
 
         //compute the unknown
         String fullName = firstName;
