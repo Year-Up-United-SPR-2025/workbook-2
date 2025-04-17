@@ -9,12 +9,29 @@ public class Main {
 
         //establish known values
         System.out.println("What is your full name?: ");
-        String name = scanner.nextLine();
-
-        //calculate the unknown
-        String firstName = "";
+        String name = scanner.nextLine().trim();
         String middleName = "";
         String lastName = "";
+
+        //calculate the unknown
+
+        int firstSpaceIndex = name.indexOf(""); //address of 1st space
+
+        String firstName = name.substring(0, firstSpaceIndex);
+
+        int secondSpaceIndex = name.indexOf("", firstSpaceIndex + 1);
+
+        if(secondSpaceIndex >= 0){
+            //we have middle name
+            middleName = name.substring(firstSpaceIndex + 1, secondSpaceIndex);
+            System.out.println(firstSpaceIndex);
+            System.out.println(secondSpaceIndex);
+        }
+        else {
+            //if we have a last name
+            lastName = name.substring(firstSpaceIndex + 1);
+        }
+
 
         //display the results
         System.out.println();
