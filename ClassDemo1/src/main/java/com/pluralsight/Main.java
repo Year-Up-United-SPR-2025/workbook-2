@@ -3,27 +3,54 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class Main {
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("What is the persons name: ");
-        String fullName = scanner.nextLine();
+        String fullName;
+        int age;
+        String profession;
 
-        System.out.print("What is the age Name: ");
-        int age = scanner.nextInt();
+        //1st person
+        System.out.print("What is the person's name: ");
+        fullName = scanner.nextLine();
+
+        System.out.print("What is the age: ");
+        age = scanner.nextInt();
         scanner.nextLine(); // clears CRLF
 
         System.out.print("What is the persons Profession: ");
-        String profession = scanner.nextLine();
+        profession = scanner.nextLine();
 
-        displayPerson(fullName, age, profession);
-        savePerson(fullName, age, profession);
+        Person thePerson = new Person(fullName, age, profession);
+
+        //Other Person
+        System.out.print("What is the other person's name: ");
+        fullName = scanner.nextLine();
+
+        System.out.print("What is the other person's age: ");
+        age = scanner.nextInt();
+        scanner.nextLine(); // clears CRLF
+
+        System.out.print("What is the other persons Profession: ");
+        profession = scanner.nextLine();
+
+        Person theOtherPerson = new Person(fullName, age, profession);
+
+        System.out.println(thePerson.getFullName());
+        System.out.println(theOtherPerson.getFullName());
+
+       displayPerson(thePerson);
+       displayPerson(theOtherPerson);
+//       savePerson(theOtherPerson);
 
     }
 
-    public static void displayPerson(String fullName, int age, String profession){
-        System.out.printf("Person %s is a %s and is %d years old.", fullName, profession, age); //%s pace holder for a string //%d placeholder for int
+    public static void displayPerson(Person person){
+        System.out.printf("Person %s is a %s and is %d years old.\n",
+                person.getFullName(),
+                person.getProfession(),
+                person.getAge()); //%s pace holder for a string //%d placeholder for int
     }
 
     public static void savePerson(String fullName, int age, String profession){
