@@ -6,17 +6,26 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What is the persons name: ");
+        System.out.print("What is the persons name: ");
         String fullName = scanner.nextLine();
 
-        System.out.println("What is the age Name: ");
+        System.out.print("What is the age Name: ");
         int age = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // clears CRLF
 
-        System.out.println("What is the persons Profession: ");
+        System.out.print("What is the persons Profession: ");
         String profession = scanner.nextLine();
 
-        System.out.printf("Person %s is a %s and is %d years old.", fullName, profession, age);
+        displayPerson(fullName, age, profession);
+        savePerson(fullName, age, profession);
 
+    }
+
+    public static void displayPerson(String fullName, int age, String profession){
+        System.out.printf("Person %s is a %s and is %d years old.", fullName, profession, age); //%s pace holder for a string //%d placeholder for int
+    }
+
+    public static void savePerson(String fullName, int age, String profession){
+        //do the work of saving a person in a database
     }
 }
