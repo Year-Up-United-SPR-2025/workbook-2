@@ -37,7 +37,7 @@ public class Main {
             System.out.println("Winner: " + team2);
         } else { //In case of a tie
             System.out.println("It's a tie!");
-            System.out.println("Lets flip a coin for the Winner The...");
+            System.out.println("Lets flip a coin for the Winner...");
             String winner = random.nextBoolean() ? team1 : team2;
             System.out.println("Congrats: " + winner + " You won the game of luck");
         }
