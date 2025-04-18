@@ -37,4 +37,12 @@ public class Person {
         this.profession = profession;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName='" + fullName + '\'' +
+                ", age=" + age +
+                ", profession='" + profession + '\'' +
+                '}';
+    }
 }

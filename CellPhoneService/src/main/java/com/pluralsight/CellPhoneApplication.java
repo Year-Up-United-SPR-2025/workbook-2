@@ -45,5 +45,8 @@ public class CellPhoneApplication {
         System.out.println("Carrier: " + phone.getCarrier());
         System.out.println("Phone Number: " + phone.getPhoneNumber());
         System.out.println("Owner: " + phone.getOwner());
+
+        phone.dial("222-555-9999");
+      phone.dial("600-400-5000");
     }
 }

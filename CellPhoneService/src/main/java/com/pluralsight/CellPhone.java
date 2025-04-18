@@ -16,6 +16,12 @@ public class CellPhone {
         this.owner = "";
     }
 
+   public void dial(String phoneNumber){
+       System.out.printf("%s's Cell Phone is dialing the number %s from the number %s ", this.owner, phoneNumber, this.getPhoneNumber());
+   }
+
+
+
     //Setters and Getters
     public int getSerialNumber(){
         return serialNumber;
