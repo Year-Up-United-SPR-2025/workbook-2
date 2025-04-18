@@ -1,11 +1,13 @@
 package com.pluralsight;
 
 import java.util.Scanner;
-import java.util.Random;
+import java.util.Random; //used this for the Random Aspect if a tie occurred
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        //In case of a tie
         Random random = new Random();
 
 
@@ -33,7 +35,7 @@ public class Main {
             System.out.println("Winner: " + team1);
         } else if (score2 > score1) {
             System.out.println("Winner: " + team2);
-        } else {
+        } else { //In case of a tie
             System.out.println("It's a tie!");
             System.out.println("Lets flip a coin for the Winner The...");
             String winner = random.nextBoolean() ? team1 : team2;
