@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+//this is declaring a person
 public class Person {
 
     private String fullName;
