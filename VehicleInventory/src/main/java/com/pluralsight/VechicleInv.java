@@ -39,10 +39,10 @@ public class VechicleInv {
                     addAVehicle(scanner);
                     break;
                 case 6:
-                    System.out.println("Goodbye!");
+                    System.out.println("Goodbye and good luck with your car!");
                     return;
                 default:
-                    System.out.println("Invalid command.");
+                    System.out.println("Invalid command please try again.");
             }
         }
     }
@@ -133,6 +133,6 @@ public class VechicleInv {
         inventory[count] = new Vehicle(id, makeModel, color, odo, price);
         count++;
 
-        System.out.println("Vehicle has been successfully added .");
+        System.out.println("Vehicle has been successfully added.");
     }
 }
