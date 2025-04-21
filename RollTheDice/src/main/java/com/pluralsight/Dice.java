@@ -1,9 +1,9 @@
 package com.pluralsight;
- import java.util.random.RandomGenerator;
- 
+
 public class Dice {
-    public static void main(String[] args) {
 
-
+    public int roll(){
+        int randomNumber = (int)(Math.random() * 6) + 1;
+        return randomNumber;
     }
 }
