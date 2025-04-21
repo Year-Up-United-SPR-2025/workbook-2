@@ -20,7 +20,7 @@ public class VechicleInv {
             System.out.print("Enter your command: ");
 
             int command = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
             switch (command) {
                 case 1:
@@ -116,7 +116,7 @@ public class VechicleInv {
 
         System.out.print("Enter vehicle ID: ");
         long id = scanner.nextLong();
-        scanner.nextLine(); 
+        scanner.nextLine();
 
         System.out.print("Enter make/model: ");
         String makeModel = scanner.nextLine();
