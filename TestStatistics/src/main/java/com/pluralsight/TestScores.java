@@ -19,6 +19,9 @@ public class TestScores {
         testScores.add(90);
         testScores.add(84);
         testScores.add(77);
+        testScores.add(12);
+        testScores.add(50);
+        testScores.add(41);
         testScores.add(100);
 
         System.out.println("Test Scores: " + testScores);
